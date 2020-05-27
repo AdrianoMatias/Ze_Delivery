@@ -51,7 +51,7 @@ export default class Main extends React.Component {
 
    
    render(){
-    const { newEnd } = this.state;  
+    const { newEnd, loading } = this.state;  
 
     return (          
         <Container>
