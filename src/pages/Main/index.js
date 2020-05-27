@@ -1,5 +1,7 @@
 import React from 'react';
 import { FaSpinner, FaPlus } from 'react-icons/fa';
+// import { UseQuery, useQuery } from '@apollo/react-hooks';
+// import gql from 'graphql-tag';
 //import { Link } from 'react-router-dom';
 
 import api from '../../services/api';
@@ -49,7 +51,7 @@ export default class Main extends React.Component {
 
    
    render(){
-    const { newEnd, loading } = this.state;  
+    const { newEnd } = this.state;  
 
     return (          
         <Container>

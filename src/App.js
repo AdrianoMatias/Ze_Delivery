@@ -4,7 +4,7 @@ import GlobalStyle from './styles/global';
 import { BrowserRouter } from 'react-router-dom';
 
 import { ApolloProvider } from 'react-apollo';
-import apolloClient from '../services/apollo';
+import apolloClient from '../src/services/apollo';
 
 function App() {
 
