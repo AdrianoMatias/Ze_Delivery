@@ -8,4 +8,4 @@
 </ol>
 <hr>
 <h2>Landing Page</h2>
-<img src="#" title="Capa" alt="landing page">
+<img src="https://github.com/AdrianoMatias/Ze_Delivery/blob/master/capa.png" title="Capa" alt="landing page">
