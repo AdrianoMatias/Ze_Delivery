@@ -49,7 +49,7 @@ export default class Main extends React.Component {
 
    
    render(){
-    const { newEnd, loading } = this.state;  
+    const { newEnd } = this.state;  
 
     return (  
            <Fragment> 

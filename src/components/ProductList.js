@@ -9,18 +9,11 @@ import { List } from '../pages/Product/styles';
 
 
 class ProductList extends Component {
-  constructor(props) {
-    super(props);
 
-    this.state = {
-      newEnd: {}
-    };
-  }
-  
     renderProductlist = () => (
          <List>
             { this.props.products.poc.products.map(product => (
-             <section key={product.id}>
+             <section key={product.title}>
                 <div className="item">{product.title}</div>
                 <div className="item">{product.productVariants[0].price}</div>
                   
@@ -34,7 +27,7 @@ class ProductList extends Component {
        )
   
     render() {
-       const { products } = this.props;
+      const { products } = this.props;
       
       return (
         <Fragment>  
