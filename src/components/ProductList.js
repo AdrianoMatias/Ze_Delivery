@@ -1,9 +1,12 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import { graphql } from 'react-apollo';
 import gql from 'graphql-tag';
 
-import Container from '../components/Container';
-import { List  } from '../pages/Product/styles';
+import Container from './Container';
+import Header from './Header';
+import Footer from './Footer';
+import { List } from '../pages/Product/styles';
+
 
 class ProductList extends Component {
   constructor(props) {
@@ -17,11 +20,13 @@ class ProductList extends Component {
     renderProductlist = () => (
          <List>
             { this.props.products.poc.products.map(product => (
-             <li key={product.id}>
-                <p>{product.title}</p>
-                <button>Remover</button>
-             <button>Adicionar</button>
-             </li>
+             <section key={product.id}>
+                <div className="item">{product.title}</div>
+                <div className="item">{product.productVariants[0].price}</div>
+                  
+                <button className="btnRemove">Remover</button>
+                <button>Adicionar</button>
+             </section>
             )
           )
             }
@@ -32,12 +37,16 @@ class ProductList extends Component {
        const { products } = this.props;
       
       return (
-        <Container> 
-         { products.loading 
-          ? <p>Carregando...</p>
-          : this.renderProductlist()
-        }
-        </Container>
+        <Fragment>  
+          <Header />
+          <Container> 
+            { products.loading 
+              ? <p>Carregando...</p>
+              : this.renderProductlist()
+            }
+          </Container>
+          <Footer />
+        </Fragment> 
       );
     }
   }

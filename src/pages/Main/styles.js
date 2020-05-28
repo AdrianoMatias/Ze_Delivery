@@ -10,6 +10,7 @@ export const Form = styled.form`
     border: 1px solid #eee;
     border-radius: 4px;
     font-size: 16px;
+    padding: 5px;
   }
 `;
 
@@ -49,3 +50,4 @@ export const SubmitButton = styled.button.attrs((props) => ({
       }
     `}
 `;
+
